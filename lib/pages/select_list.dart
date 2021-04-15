@@ -1,5 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:ecomm_test_app/body_elements/drawer.dart';
+import 'package:ecomm_test_app/pages/homepage.dart';
 import 'package:ecomm_test_app/single_elements/single_selectedList.dart';
 import 'package:flutter/material.dart';
 
@@ -125,7 +126,7 @@ class _selectedlistsState extends State<selectedlists> {
       child:Row(
         children: [
           InkWell(onTap: () {
-
+            Navigator.pop(context);
           },
             child: Row(children:[
             SizedBox(width: 8,),
@@ -138,7 +139,7 @@ class _selectedlistsState extends State<selectedlists> {
             ],),
           ),
           InkWell(onTap: () {
-
+            Navigator.pop(context);
           },
             child: Row(children: [
               Padding(

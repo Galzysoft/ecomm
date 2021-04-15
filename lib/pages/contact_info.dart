@@ -58,15 +58,14 @@ class _contactinfoState extends State<contactinfo> {
 
           Container(
             margin: const EdgeInsets.fromLTRB(0, 8, 5, 0),
-            child: InkWell(onTap: (){
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => cart(),
-                  ));
-
-
-            },
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => cart(),
+                    ));
+              },
               child: Badge(
                   badgeContent: Text(
                     '1',
@@ -79,7 +78,6 @@ class _contactinfoState extends State<contactinfo> {
                     color: Colors.white,
                   )),
             ),
-
           ),
           SizedBox(
             width: 10.0,
@@ -87,33 +85,38 @@ class _contactinfoState extends State<contactinfo> {
         ],
       ),
       drawer: DrawerWidget(),
-      bottomNavigationBar:  SizedBox(
+      bottomNavigationBar: SizedBox(
         height: 70,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
           child: SizedBox(
+            height: 200,
             width: MediaQuery.of(context).size.width,
-            child: Expanded(
-              child: Material(
-                color: Color(0XFF03ADC1),
-                child: FlatButton(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Material(
                     color: Color(0XFF03ADC1),
-                    onPressed: () {Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => addressinfo(),
-                        ));},
-                    child: Text(
-                      "NEXT",
-                      style: TextStyle(color: Colors.white),
-                    )),
-              ),
+                    child: FlatButton(
+                        color: Color(0XFF03ADC1),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => addressinfo(),
+                              ));
+                        },
+                        child: Text(
+                          "NEXT",
+                          style: TextStyle(color: Colors.white),
+                        )),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
       ),
-
-
       body: Container(
         decoration: BoxDecoration(
           color: Color(0XFFEDECEC),

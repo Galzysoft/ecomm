@@ -177,23 +177,27 @@ class _cartState extends State<cart> {
                   padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width,
-                    child: Expanded(
-                      child: Material(
-                        color: Color(0XFF03ADC1),
-                        child: FlatButton(
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Material(
                             color: Color(0XFF03ADC1),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => contactinfo(),
-                                  ));
-                            },
-                            child: Text(
-                              "Add to Cart",
-                              style: TextStyle(color: Colors.white),
-                            )),
-                      ),
+                            child: FlatButton(
+                                color: Color(0XFF03ADC1),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => contactinfo(),
+                                      ));
+                                },
+                                child: Text(
+                                  "Add to Cart",
+                                  style: TextStyle(color: Colors.white),
+                                )),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

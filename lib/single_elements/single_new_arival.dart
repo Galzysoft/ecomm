@@ -104,51 +104,10 @@ class _singlenewarrivalState extends State<singlenewarrival> {
                                       });
                                     })),
                             Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        height: 1,
-                                        width: 3,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            shape: BoxShape.rectangle),
-                                      ),
-                                    ),
-                                    Expanded(
-                                        child: SizedBox(
-                                      height: 20,
-                                    )),
-                                    Expanded(
-                                      child: Container(
-                                        height: 1,
-                                        width: 3,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            shape: BoxShape.rectangle),
-                                      ),
-                                    ),
-                                    Expanded(
-                                        child: SizedBox(
-                                      height: 20,
-                                    )),
-                                    Expanded(
-                                      child: Container(
-                                        height: 1,
-                                        width: 3,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            shape: BoxShape.rectangle),
-                                      ),
-                                    ),
-                                    Expanded(
-                                        child: SizedBox(
-                                      height: 20,
-                                    )),
-                                  ],
-                                ),
+                              child: IconButton(
+                                icon:
+                                    Icon(Icons.more_vert, color: Colors.white),
+                                onPressed: () {},
                               ),
                             )
                           ],

@@ -90,105 +90,112 @@ class _makepaymentState extends State<makepayment> {
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
-              child: Expanded(
-                child: Material(
-                  color: Color(0XFF03ADC1),
-                  child: FlatButton(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Material(
                       color: Color(0XFF03ADC1),
-                      onPressed: () {
-                        setState(() {
-                          ispay = true;
-                        });
-                        showDialog(
-                            context: context,
-                            builder: (context) {
-                              return new AlertDialog(
-                                content: SizedBox(
-                                  width: 400,
-                                  height: 440,
-                                  child: Center(
-                                    child: Column(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(24.0),
-                                          child: new Container(
-                                            width: 300,
-                                            height: 220,
-                                            decoration: BoxDecoration(
-                                                border: Border.all(
-                                                    color: Color(0XFF03ADC1),
-                                                    width: 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(200)),
-                                            child: Center(
-                                              child: Column(
-                                                children: [
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Icon(Icons.done,
-                                                        size: 50,
-                                                        color:
-                                                            Color(0XFF03ADC1)),
-                                                  ),
-                                                  Expanded(
-                                                    child: Text(
-                                                      "Succesful",
-                                                      style: TextStyle(
+                      child: FlatButton(
+                          color: Color(0XFF03ADC1),
+                          onPressed: () {
+                            setState(() {
+                              ispay = true;
+                            });
+                            showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return new AlertDialog(
+                                    content: SizedBox(
+                                      width: 400,
+                                      height: 440,
+                                      child: Center(
+                                        child: Column(
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(24.0),
+                                              child: new Container(
+                                                width: 300,
+                                                height: 220,
+                                                decoration: BoxDecoration(
+                                                    border: Border.all(
                                                         color:
                                                             Color(0XFF03ADC1),
-                                                        fontSize: 14,
-                                                        fontWeight:
-                                                            FontWeight.bold,
+                                                        width: 1),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            200)),
+                                                child: Center(
+                                                  child: Column(
+                                                    children: [
+                                                      Expanded(
+                                                        flex: 2,
+                                                        child: Icon(Icons.done,
+                                                            size: 50,
+                                                            color: Color(
+                                                                0XFF03ADC1)),
                                                       ),
-                                                    ),
+                                                      Expanded(
+                                                        child: Text(
+                                                          "Succesful",
+                                                          style: TextStyle(
+                                                            color: Color(
+                                                                0XFF03ADC1),
+                                                            fontSize: 14,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
                                                   ),
-                                                ],
+                                                ),
                                               ),
                                             ),
-                                          ),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Text(
+                                              "Thank You For Your Purchase",
+                                              style: TextStyle(
+                                                color: Colors.black54,
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Text(
+                                              "ORDER CODE",
+                                              style: TextStyle(
+                                                color: Colors.black54,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            Text(
+                                              "$codee",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
                                         ),
-                                        SizedBox(
-                                          height: 20,
-                                        ),
-                                        Text(
-                                          "Thank You For Your Purchase",
-                                          style: TextStyle(
-                                            color: Colors.black54,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 20,
-                                        ),
-                                        Text(
-                                          "ORDER CODE",
-                                          style: TextStyle(
-                                            color: Colors.black54,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        Text(
-                                          "$codee",
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
+                                      ),
                                     ),
-                                  ),
-                                ),
-                              );
-                            }).then((value) => ispay = false);
-                      },
-                      child: Text(
-                        "MAKE PAYMENT",
-                        style: TextStyle(color: Colors.white),
-                      )),
-                ),
+                                  );
+                                }).then((value) => ispay = false);
+                          },
+                          child: Text(
+                            "MAKE PAYMENT",
+                            style: TextStyle(color: Colors.white),
+                          )),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
