@@ -1,8 +1,9 @@
 import 'package:badges/badges.dart';
-import 'cart.dart';
-import 'file:///C:/Users/USER/AndroidStudioProjects/ecomm_test_app/lib/body_elements/drawer.dart';
 import 'package:flutter/material.dart';
 
+import 'file:///C:/Users/USER/AndroidStudioProjects/ecomm_test_app/lib/body_elements/drawer.dart';
+
+import 'cart.dart';
 import 'homepage.dart';
 
 class termsandcondition extends StatefulWidget {
@@ -17,14 +18,14 @@ class _termsandconditionState extends State<termsandcondition> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: ListTile(
-        leading: SizedBox(width: 170,
+        leading: SizedBox(
+          width: 170,
           child: Row(
             children: [
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Checkbox(
-
                     value: isAgree,
                     onChanged: (value) {
                       setState(() {
@@ -37,11 +38,12 @@ class _termsandconditionState extends State<termsandcondition> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child:
-                  Text("I agree",style: TextStyle(color:Colors.cyan,fontSize:14.0),),
+                  child: Text(
+                    "I agree",
+                    style: TextStyle(color: Colors.cyan, fontSize: 14.0),
+                  ),
                 ),
               ),
-
             ],
           ),
         ),
@@ -80,24 +82,18 @@ class _termsandconditionState extends State<termsandcondition> {
                 Icons.search,
                 color: Colors.white,
               ),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new termsandcondition()));
-              }),
+              onPressed: () {}),
 
           Container(
             margin: const EdgeInsets.fromLTRB(0, 8, 5, 0),
-            child: InkWell(onTap: (){
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => cart(),
-                  ));
-
-
-            },
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => cart(),
+                    ));
+              },
               child: Badge(
                   badgeContent: Text(
                     '1',
@@ -127,7 +123,7 @@ class _termsandconditionState extends State<termsandcondition> {
                 title: new Text("General Terms"),
                 subtitle: Text(
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad"
-                        "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+                    "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
               ),
             ),
           ),
@@ -139,7 +135,7 @@ class _termsandconditionState extends State<termsandcondition> {
                 title: new Text("Personel Data"),
                 subtitle: Text(
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad"
-                        "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+                    "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
               ),
             ),
           ),
@@ -151,7 +147,7 @@ class _termsandconditionState extends State<termsandcondition> {
                 title: new Text("Privacy Agreement"),
                 subtitle: Text(
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad"
-                        "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+                    "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
               ),
             ),
           ),

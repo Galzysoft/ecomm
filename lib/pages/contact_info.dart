@@ -50,10 +50,7 @@ class _contactinfoState extends State<contactinfo> {
                 color: Colors.white,
               ),
               onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new termsandcondition()));
+
               }),
 
           Container(

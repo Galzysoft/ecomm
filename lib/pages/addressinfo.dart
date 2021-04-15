@@ -2,7 +2,6 @@ import 'package:badges/badges.dart';
 import 'package:ecomm_test_app/body_elements/drawer.dart';
 import 'package:ecomm_test_app/pages/cart.dart';
 import 'package:ecomm_test_app/pages/make_payment.dart';
-import 'package:ecomm_test_app/pages/terms_and_Conditon.dart';
 import 'package:flutter/material.dart';
 
 class addressinfo extends StatefulWidget {
@@ -53,12 +52,7 @@ class _addressinfoState extends State<addressinfo> {
                 Icons.search,
                 color: Colors.white,
               ),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (context) => new termsandcondition()));
-              }),
+              onPressed: () {}),
 
           Container(
             margin: const EdgeInsets.fromLTRB(0, 8, 5, 0),
@@ -378,75 +372,79 @@ class _addressinfoState extends State<addressinfo> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: SizedBox(
-                      height: 176,
-                      width: MediaQuery.of(context).size.width,
-                      child: Row(
-                        children: [
-                          Expanded(
-                              flex: 3,
-                              child: SizedBox(
-                                height: 70,
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(16, 0, 16, 8),
-                                  child: SizedBox(
-                                    width: MediaQuery.of(context).size.width,
-                                    child: Expanded(
-                                      child: Material(
-                                        color: Color(0XFF03ADC1),
-                                        child: TextFormField(
-                                          controller: commentcontroller,
-                                          keyboardType: TextInputType.multiline,
-                                          style: TextStyle(
-                                            color: Color(0xFFB3B6B7),
+                  SizedBox(
+                    height: 176,
+                    width: MediaQuery.of(context).size.width,
+                    child: Row(
+                      children: [
+                        Expanded(
+                            flex: 3,
+                            child: SizedBox(
+                              height: 150,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                                child: SizedBox(
+                                  width: MediaQuery.of(context).size.width,
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Material(
+                                          color: Color(0XFF03ADC1),
+                                          child: TextFormField(
+                                            maxLines: null,
+                                            expands: true,
+                                            controller: commentcontroller,
+                                            keyboardType:
+                                                TextInputType.multiline,
+                                            style: TextStyle(
+                                              color: Color(0xFFB3B6B7),
+                                            ),
+                                            decoration: InputDecoration(
+                                              border: InputBorder.none,
+                                              labelText: "Comments ",
+                                              // errorText: "Enter Your Phone Number",
+                                            ),
+                                            validator: (value) {
+                                              if (value.isEmpty) {
+                                                return "Please enterYour  Commentsr";
+                                              } else {
+                                                return null;
+                                              }
+                                            },
                                           ),
-                                          decoration: InputDecoration(
-                                            border: InputBorder.none,
-                                            labelText: "Comments ",
-                                            // errorText: "Enter Your Phone Number",
-                                          ),
-                                          validator: (value) {
-                                            if (value.isEmpty) {
-                                              return "Please enterYour  Commentsr";
-                                            } else {
-                                              return null;
-                                            }
-                                          },
                                         ),
                                       ),
-                                    ),
+                                    ],
                                   ),
                                 ),
-                              )
-
-                              // SizedBox(
-                              //   height: 200,
-                              //   child: TextFormField(
-                              //     controller: commentcontroller,
-                              //     keyboardType: TextInputType.multiline,
-                              //     style: TextStyle(
-                              //       color: Color(0xFFB3B6B7),
-                              //     ),
-                              //     decoration: InputDecoration(
-                              //       border: InputBorder.none,
-                              //       labelText: "Comments ",
-                              //       // errorText: "Enter Your Phone Number",
-                              //     ),
-                              //     validator: (value) {
-                              //       if (value.isEmpty) {
-                              //         return "Please enterYour  Commentsr";
-                              //       } else {
-                              //         return null;
-                              //       }
-                              //     },
-                              //   ),
-                              // ),
                               ),
-                        ],
-                      ),
+                            )
+
+                            // SizedBox(
+                            //   height: 200,
+                            //   child: TextFormField(
+                            //     controller: commentcontroller,
+                            //     keyboardType: TextInputType.multiline,
+                            //     style: TextStyle(
+                            //       color: Color(0xFFB3B6B7),
+                            //     ),
+                            //     decoration: InputDecoration(
+                            //       border: InputBorder.none,
+                            //       labelText: "Comments ",
+                            //       // errorText: "Enter Your Phone Number",
+                            //     ),
+                            //     validator: (value) {
+                            //       if (value.isEmpty) {
+                            //         return "Please enterYour  Commentsr";
+                            //       } else {
+                            //         return null;
+                            //       }
+                            //     },
+                            //   ),
+                            // ),
+                            ),
+                      ],
                     ),
                   ),
                 ],

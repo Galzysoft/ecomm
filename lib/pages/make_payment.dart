@@ -1,7 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:ecomm_test_app/body_elements/cardpayments.dart';
 import 'package:ecomm_test_app/body_elements/drawer.dart';
-import 'package:ecomm_test_app/pages/terms_and_Conditon.dart';
 import 'package:flutter/material.dart';
 
 import 'cart.dart';
@@ -48,12 +47,7 @@ class _makepaymentState extends State<makepayment> {
                   Icons.search,
                   color: Colors.white,
                 ),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (context) => new termsandcondition()));
-                }),
+                onPressed: () {}),
 
             Container(
               margin: const EdgeInsets.fromLTRB(0, 8, 5, 0),
@@ -106,8 +100,8 @@ class _makepaymentState extends State<makepayment> {
                                 builder: (context) {
                                   return new AlertDialog(
                                     content: SizedBox(
-                                      width: 400,
-                                      height: 440,
+                                      width: 300,
+                                      height: 300,
                                       child: Center(
                                         child: Column(
                                           children: [
@@ -115,8 +109,8 @@ class _makepaymentState extends State<makepayment> {
                                               padding:
                                                   const EdgeInsets.all(24.0),
                                               child: new Container(
-                                                width: 300,
-                                                height: 220,
+                                                width: 100,
+                                                height: 100,
                                                 decoration: BoxDecoration(
                                                     border: Border.all(
                                                         color:
@@ -124,7 +118,7 @@ class _makepaymentState extends State<makepayment> {
                                                         width: 1),
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            200)),
+                                                            500)),
                                                 child: Center(
                                                   child: Column(
                                                     children: [
@@ -155,31 +149,39 @@ class _makepaymentState extends State<makepayment> {
                                             SizedBox(
                                               height: 20,
                                             ),
-                                            Text(
-                                              "Thank You For Your Purchase",
-                                              style: TextStyle(
-                                                color: Colors.black54,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.bold,
+                                            Expanded(
+                                              child: Text(
+                                                "Thank You For Your Purchase",
+                                                style: TextStyle(
+                                                  color: Colors.black54,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
                                             ),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Text(
-                                              "ORDER CODE",
-                                              style: TextStyle(
-                                                color: Colors.black54,
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold,
+                                            Expanded(
+                                              child: SizedBox(
+                                                height: 20,
                                               ),
                                             ),
-                                            Text(
-                                              "$codee",
-                                              style: TextStyle(
-                                                color: Colors.black,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.bold,
+                                            Expanded(
+                                              child: Text(
+                                                "ORDER CODE",
+                                                style: TextStyle(
+                                                  color: Colors.black54,
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ),
+                                            Expanded(
+                                              child: Text(
+                                                "$codee",
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
                                             ),
                                           ],

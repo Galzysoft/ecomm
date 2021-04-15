@@ -192,7 +192,7 @@ class _cartState extends State<cart> {
                                       ));
                                 },
                                 child: Text(
-                                  "Add to Cart",
+                                  "Make Payment",
                                   style: TextStyle(color: Colors.white),
                                 )),
                           ),
